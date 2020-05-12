@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/img_chuck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn_randomJoke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eText_titleApp"
+        app:srcCompat="@drawable/ic_chucknorris"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <Button
+        android:id="@+id/btn_randomJoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/random_joke"
+        app:layout_constraintBottom_toTopOf="@id/btn_txtinput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_txtinput"
+        app:layout_constraintTop_toBottomOf="@id/img_chuck"
+        android:onClick="clickRandomJoke"/>
+
+    <Button
+        android:id="@+id/btn_txtinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_input"
+        app:layout_constraintStart_toEndOf="@id/btn_randomJoke"
+        app:layout_constraintEnd_toStartOf="@id/btn_endlessList"
+        app:layout_constraintBottom_toBottomOf="@id/btn_randomJoke"
+        android:onClick="clickTxtInput"/>
+
+    <Button
+        android:id="@+id/btn_endlessList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/never_ending_list"
+        app:layout_constraintStart_toEndOf="@id/btn_txtinput"
+        app:layout_constraintBottom_toBottomOf="@id/btn_txtinput"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="clickInfiniteList"/>
+
+  <FrameLayout
+      android:id="@+id/frag_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/btn_txtinput"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+    <TextView
+        android:id="@+id/eText_titleApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="30sp"
+        android:text="Chuck Norris jokes! LOL"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ChuckNorris_MVVM_Jaime</string>
+    <string name="random_joke">Random joke</string>
+    <string name="text_input">Text input</string>
+    <string name="never_ending_list">Never ending list</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="random_joke_title">Random joke</string>
+    <string name="input_joke_title">Text input</string>
+    <string name="endless_list_title">Never ending list</string>
+
+</resources>
